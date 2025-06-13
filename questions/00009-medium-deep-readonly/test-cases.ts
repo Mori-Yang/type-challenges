@@ -27,7 +27,7 @@ type X1 = {
     }
   }
 }
-
+type A = DeepReadonly<X1>
 type X2 = { a: string } | { b: number }
 
 type Expected1 = {
