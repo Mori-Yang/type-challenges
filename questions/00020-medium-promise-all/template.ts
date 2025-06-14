@@ -10,8 +10,7 @@
  * 因此PromiseAll接收的参数为一个元组，即 readonly的数组
  * 返回值类型为 Promise<元组>
  *
- * { [K in keyof T] } : ... 如果T为元组，则{ [K in keyof T] }会被推导为元组
- * 如果T为数组，则会被推到尾
+ * { [K in keyof T] : ... }  如果T为元组，则会被推导为元组，如果T为数组，则被推导为普通对象
  * Awaited 就是对Promise的解封装，将Promise<T>中的T拿出来
  */
 declare function PromiseAll<T extends any[]>(values: readonly [...T]):
